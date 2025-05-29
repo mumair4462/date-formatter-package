@@ -208,22 +208,22 @@ The formatter supports a subset of ICU/Angular-style date tokens:
 ## Usage & Examples
 
 ```bash
-# Import
- import { dateFormatter, DateFormat } from 'date-formatter';
+// Import
+ import { dateFormatter } from 'date-formatter';
 
-# Basic Example
+// Basic Example
 const formatted = dateFormatter(new Date(), 'medium');
-console.log(formatted); # e.g., "May 29, 2025, 2:15:30 PM"
+console.log(formatted); // e.g., "May 29, 2025, 2:15:30 PM"
 
-# With Custom Format
+// With Custom Format
 const custom = dateFormatter(new Date(), 'dd/MM/yy');
 console.log(custom); // e.g., "29/05/25"
 
-# With Custom Locale
+// With Custom Locale
 const french = dateFormatter(new Date(), 'fullDate', 'fr-FR');
 console.log(french); // e.g., "jeudi 29 mai 2025"
 
-# Example Scenarios
+// Example Scenarios
 
 dateFormatter('2025-12-25T10:00:00', 'fullDate');
 // Output: "Thursday, December 25, 2025";
