@@ -1,4 +1,4 @@
-# date-formatter-package
+# date-formatx-package
 
 A lightweight and flexible JavaScript utility to format dates using **ICU date-time format tokens** and standard **preset styles**. Ideal for any JavaScript/TypeScript project that requires locale-aware and timezone-aware date formatting.
 
@@ -18,13 +18,13 @@ A lightweight and flexible JavaScript utility to format dates using **ICU date-t
 ## 📦 Installation
 
 ```bash
-npm install date-formatter
+npm install date-formatx
 ```
 
 or with yarn:
 
 ```bash
-yarn add date-formatter
+yarn add date-formatx
 ```
 
 ## Built-in Presets (DateFormat Enum)
@@ -260,7 +260,7 @@ dateFormatter(
 
 ```bash
 // Import
- import { dateFormatter } from 'date-formatter';
+ import { dateFormatter } from 'date-formatx';
 
 // Basic Example
 const formatted = dateFormatter(new Date(), 'medium');
