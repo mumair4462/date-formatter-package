@@ -24,7 +24,7 @@ npm install date-formatter
 or with yarn:
 
 ```bash
-yarn add your-package-name
+yarn add date-formatter
 ```
 
 ## Built-in Presets (DateFormat Enum)
@@ -203,3 +203,49 @@ The formatter supports a subset of ICU/Angular-style date tokens:
     </tr>
   </tbody>
 </table>
+
+
+## Usage & Examples
+
+```bash
+# Import
+ import { dateFormatter, DateFormat } from 'date-formatter';
+
+# Basic Example
+const formatted = dateFormatter(new Date(), 'medium');
+console.log(formatted); # e.g., "May 29, 2025, 2:15:30 PM"
+
+# With Custom Format
+const custom = dateFormatter(new Date(), 'dd/MM/yy');
+console.log(custom); // e.g., "29/05/25"
+
+# With Custom Locale
+const french = dateFormatter(new Date(), 'fullDate', 'fr-FR');
+console.log(french); // e.g., "jeudi 29 mai 2025"
+
+# Example Scenarios
+
+dateFormatter('2025-12-25T10:00:00', 'fullDate');
+// Output: "Thursday, December 25, 2025";
+
+dateFormatter(1735123200000, 'MMM d, y');
+// Output: "Dec 25, 2025"
+
+dateFormatter('invalid-date', 'medium');
+// Output: "Invalid Date"
+
+```
+
+## Notes
+
+<ul style="font-family: Arial, sans-serif; padding-left: 20px; line-height: 1.6;">
+  <li style="margin-bottom: 8px;">
+    Falls back to <code style="background-color: #f4f4f4; padding: 2px 4px; border-radius: 4px;">date.toISOString()</code> if format parsing fails.
+  </li>
+  <li style="margin-bottom: 8px;">
+    Supports only tokens explicitly mapped to <code style="background-color: #f4f4f4; padding: 2px 4px; border-radius: 4px;">Intl.DateTimeFormatOptions</code>.
+  </li>
+  <li style="margin-bottom: 8px;">
+    Ideal for lightweight date formatting without pulling in larger libraries like <code style="background-color: #f4f4f4; padding: 2px 4px; border-radius: 4px;">date-fns</code> or <code style="background-color: #f4f4f4; padding: 2px 4px; border-radius: 4px;">moment</code>.
+  </li>
+</ul>
