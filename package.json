@@ -1,0 +1,42 @@
+{
+  "name": "date-formatter",
+  "version": "1.0.0",
+  "description": "This package provides a simple and flexible way to format JavaScript dates",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsc src/index.ts && node src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mumair4462/date-formatter-package.git"
+  },
+  "keywords": [
+    "date",
+    "date-format",
+    "formatter",
+    "date-formatter",
+    "format-date",
+    "date-utils",
+    "datepipe",
+    "date-formatting",
+    "javascript-date",
+    "typescript-date",
+    "lightweight-date",
+    "date-helper",
+    "date-library",
+    "custom-date-format"
+  ],
+  "author": "Umair Saeed",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mumair4462/date-formatter-package/issues"
+  },
+  "homepage": "https://github.com/mumair4462/date-formatter-package#readme",
+  "devDependencies": {
+    "tsup": "^8.5.0",
+    "typescript": "^5.8.3"
+  }
+}
