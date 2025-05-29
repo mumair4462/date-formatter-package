@@ -204,6 +204,57 @@ The formatter supports a subset of ICU/Angular-style date tokens:
   </tbody>
 </table>
 
+## Function: `dateFormatter`
+
+The core utility function of this package is:
+
+```ts
+dateFormatter(
+  input: Date | string | number,
+  format?: keyof typeof DateFormat | string,
+  locale?: string
+): string
+
+```
+
+### Parameters
+<table style="border-collapse: collapse; width: 100%; font-family: Arial, sans-serif;">
+  <thead>
+    <tr>
+      <th style="border: 1px solid #ccc; padding: 8px; background-color: #f2f2f2;">Parameter</th>
+      <th style="border: 1px solid #ccc; padding: 8px; background-color: #f2f2f2;">Type</th>
+      <th style="border: 1px solid #ccc; padding: 8px; background-color: #f2f2f2;">Default</th>
+      <th style="border: 1px solid #ccc; padding: 8px; background-color: #f2f2f2;">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border: 1px solid #ccc; padding: 8px;">input</td>
+      <td style="border: 1px solid #ccc; padding: 8px;">Date | string | number</td>
+      <td style="border: 1px solid #ccc; padding: 8px;">Required</td>
+      <td style="border: 1px solid #ccc; padding: 8px;">
+        The input date to format. Can be a <code style="background-color: #f4f4f4; padding: 2px 4px; border-radius: 4px;">Date</code> object, ISO string (<code>'2025-12-25T10:00:00'</code>), or a timestamp (<code>1735123200000</code>).
+      </td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #ccc; padding: 8px;">format</td>
+      <td style="border: 1px solid #ccc; padding: 8px;">keyof DateFormat | string</td>
+      <td style="border: 1px solid #ccc; padding: 8px;">'medium'</td>
+      <td style="border: 1px solid #ccc; padding: 8px;">
+        A custom ICU/Angular-style format string (e.g. <code>'dd/MM/yy'</code>) or a key from the built-in <code>DateFormat</code> enum (<code>'short'</code>, <code>'fullTime'</code>, etc.).
+      </td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #ccc; padding: 8px;">locale</td>
+      <td style="border: 1px solid #ccc; padding: 8px;">string</td>
+      <td style="border: 1px solid #ccc; padding: 8px;">'en-US'</td>
+      <td style="border: 1px solid #ccc; padding: 8px;">
+        Locale code to control localization of month names, day names, AM/PM, etc. Examples: <code>'en-US'</code>, <code>'fr-FR'</code>, <code>'ur-PK'</code>.
+      </td>
+    </tr>
+  </tbody>
+</table>
+
 
 ## Usage & Examples
 
