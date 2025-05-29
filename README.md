@@ -19,3 +19,10 @@ A lightweight and flexible JavaScript utility to format dates using **ICU date-t
 
 ```bash
 npm install date-formatter
+
+or with yarn:
+
+```bash
+yarn add your-package-name
+
+##Built-in Presets (DateFormat Enum)
