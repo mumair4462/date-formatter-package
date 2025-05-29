@@ -1,5 +1,5 @@
 {
-  "name": "icu-date-formatter",
+  "name": "date-formatter-icu",
   "version": "1.0.0",
   "description": "This package provides a simple and flexible way to format JavaScript dates",
   "main": "./dist/index.js",
