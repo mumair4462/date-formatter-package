@@ -15,6 +15,9 @@
   },
   "keywords": [
     "date",
+    "date-formatter-icu",
+    "icu-date-formatter",
+    "icu-date",
     "date-format",
     "formatter",
     "date-formatter",
